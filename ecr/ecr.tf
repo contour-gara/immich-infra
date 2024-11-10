@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "reverse_proxy" {
-  name                 = "immich-reverse-proxy"
+  name                 = "${local.appname}-reverse-proxy"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
