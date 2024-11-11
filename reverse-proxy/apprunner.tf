@@ -22,12 +22,17 @@ resource "aws_apprunner_service" "reverse_proxy" {
     auto_deployments_enabled = true
   }
 
+  instance_configuration {
+    cpu    = "256"
+    memory = "512"
+  }
+
   health_check_configuration {
-    healthy_threshold = 1
-    interval = 5
-    path = "/"
-    protocol = "HTTP"
-    timeout = 5
+    healthy_threshold   = 1
+    interval            = 5
+    path                = "/"
+    protocol            = "HTTP"
+    timeout             = 5
     unhealthy_threshold = 3
   }
 }
