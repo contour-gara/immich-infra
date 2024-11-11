@@ -33,7 +33,7 @@ resource "aws_apprunner_service" "reverse_proxy" {
     path                = "/"
     protocol            = "HTTP"
     timeout             = 5
-    unhealthy_threshold = 3
+    unhealthy_threshold = 1
   }
 }
 
