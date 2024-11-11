@@ -11,4 +11,7 @@ crash.log
 
 terraform.tfvars
 
+.env_for_cron
+.cron.log
+
 .vscode/
