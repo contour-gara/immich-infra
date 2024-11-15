@@ -15,12 +15,12 @@
     },
     {
       "rulePriority": 2,
-      "description": "30日経ったらイメージを削除するライフサイクルのルール",
+      "description": "5 日経ったらイメージを削除するライフサイクルのルール",
       "selection": {
         "tagStatus": "any",
         "countType": "sinceImagePushed",
         "countUnit": "days",
-        "countNumber": 30
+        "countNumber": 5
       },
       "action": {
         "type": "expire"
