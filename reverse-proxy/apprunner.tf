@@ -15,7 +15,7 @@ resource "aws_apprunner_service" "reverse_proxy" {
 
         runtime_environment_variables = {
           MY_GLOBAL_IP = var.my_global_ip
-          PORT         = var.port
+          IMMICH_PORT  = var.immich_port
         }
       }
     }
@@ -34,7 +34,7 @@ resource "aws_apprunner_service" "reverse_proxy" {
     path                = "/"
     protocol            = "HTTP"
     timeout             = 5
-    unhealthy_threshold = 1
+    unhealthy_threshold = 3
   }
 }
 
